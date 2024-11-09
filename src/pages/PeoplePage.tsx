@@ -56,7 +56,7 @@ export const PeoplePage: React.FC = () => {
   useEffect(() => {
     setIsPeopleLoading(true);
     getPeople()
-      .then(responce => setPeople(getPeopleWithParents(responce)))
+      .then(response => setPeople(getPeopleWithParents(response)))
       .catch(() => setHasError(true))
       .finally(() => setIsPeopleLoading(false));
   }, []);
